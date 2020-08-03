@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class makerInformation {
 	@RequestMapping("/makerInformation/main")
 	public String makerInformationMain() {
-		return "/about/makerInformation";
+		return "about/makerInformation";
 	}
 }

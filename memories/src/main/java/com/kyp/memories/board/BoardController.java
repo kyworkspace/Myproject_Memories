@@ -8,6 +8,8 @@ public class BoardController {
 	
 	@RequestMapping("/board/main")
 	public String main() {
+		
+		
 		return "board/boardMain";
 	}
 

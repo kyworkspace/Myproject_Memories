@@ -9,6 +9,6 @@ public class PictureController {
 	@RequestMapping("/picture/main")
 	public String videoMain() {
 		
-		return "/board/pictureMain";
+		return "board/pictureMain";
 	}
 }
