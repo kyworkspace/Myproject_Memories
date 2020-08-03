@@ -4,14 +4,14 @@
  
 <tiles-definitions>
  
-    <definition name="base2" template="/WEB-INF/views/layout/template2.jsp">
+    <definition name="noHeader" template="/WEB-INF/views/layout/template2.jsp">
         <put-attribute name="nav"   value="/WEB-INF/views/layout/nav.jsp" />
         <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
     </definition>
     
     <!-- 화면의 기초가 되는 base -->
-    <definition name="base" template="/WEB-INF/views/layout/template2.jsp">
+    <definition name="base" template="/WEB-INF/views/layout/template.jsp">
         <put-attribute name="nav"   value="/WEB-INF/views/layout/nav.jsp" />
         <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
         <put-attribute name="body" value="" />
@@ -24,14 +24,10 @@
          <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
      </definition> -->
      
-    <definition name="board/*" extends="/WEB-INF/views/layout/template2.jsp">
+    <definition name="board/*" extends="noHeader">
          <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
      </definition>
      
-     <definition name="board/*" extends="/WEB-INF/views/layout/template2.jsp">
-         <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
-     </definition>
-    
     <definition name="*" extends="base">
         <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
     </definition>
