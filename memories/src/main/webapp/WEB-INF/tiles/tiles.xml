@@ -5,9 +5,9 @@
 <tiles-definitions>
  
     <definition name="base2" template="/WEB-INF/views/layout/template2.jsp">
-        <!-- <put-attribute name="nav"   value="/WEB-INF/views/layout/nav.jsp" /> -->
+        <put-attribute name="nav"   value="/WEB-INF/views/layout/nav.jsp" />
         <put-attribute name="body" value="" />
-        <!-- <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" /> -->
+        <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
     </definition>
     
     <!-- 화면의 기초가 되는 base -->
