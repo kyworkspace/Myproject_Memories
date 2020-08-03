@@ -21,10 +21,12 @@
   
 </head>
 <body>
-
+<div>
 <tiles:insertAttribute name = "nav"/>
 <tiles:insertAttribute name = "body"/>
 <tiles:insertAttribute name = "footer"/>
+</div>
+
 
 
   <!-- Bootstrap core JavaScript -->

@@ -4,9 +4,8 @@
  
 <tiles-definitions>
  
-    <definition name="noHeader" template="/WEB-INF/views/layout/template2.jsp">
+    <definition name="noHeader" template="/WEB-INF/views/layout/noHeader.jsp">
         <put-attribute name="nav"   value="/WEB-INF/views/layout/nav.jsp" />
-        <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
     </definition>
     
@@ -14,21 +13,22 @@
     <definition name="base" template="/WEB-INF/views/layout/template.jsp">
         <put-attribute name="nav"   value="/WEB-INF/views/layout/nav.jsp" />
         <put-attribute name="header" value="/WEB-INF/views/layout/header.jsp" />
-        <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp" />
     </definition>
     
-    <!-- 동적 매핑.
-         만약 /user/login의 경로라면 /WEB-INF/views/user/login.jsp 뷰를 가져온다. -->
-	<!-- <definition name="/about/*" extends="base2">
-         <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
-     </definition> -->
-     
-    <definition name="board/*" extends="noHeader">
-         <put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp" />
-     </definition>
-     
-    <definition name="*" extends="base">
+    <!-- 동적 매핑. 만약 /user/login의 경로라면 /WEB-INF/views/user/login.jsp 뷰를 가져온다. -->
+
+
+	<definition name="main" extends="base">
+		<put-attribute name="body"
+			value="/WEB-INF/views/main.jsp" />
+	</definition>
+
+	<definition name="*/*" extends="noHeader">
+		<put-attribute name="body"
+			value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+<!--     <definition name="*" extends="base">
         <put-attribute name="body" value="/WEB-INF/views/{1}.jsp" />
     </definition>
  
@@ -38,5 +38,5 @@
         
     <definition name="*/*/*" extends="base">
         <put-attribute name="body" value="/WEB-INF/views/{1}/{2}/{3}.jsp" />
-    </definition>
+    </definition> -->
 </tiles-definitions>

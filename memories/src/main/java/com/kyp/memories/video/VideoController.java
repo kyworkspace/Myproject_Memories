@@ -9,7 +9,7 @@ public class VideoController {
 	@RequestMapping("/video/main")
 	public String pictureMain() {
 		
-		return "/board/videoMain";
+		return "board/videoMain";
 	}
 	
 }
