@@ -24,9 +24,9 @@ function signUp(){
 
 <body>
 <form id="signUpForm" method="POST">
-	<input type="hidden" id="userId" />
-	<input type="hidden" id="email"/>
-	<input type="hidden" id="password"/>
+	<input type="hidden" id="userId" name="userId"/>
+	<input type="hidden" id="email" name = "email"/>
+	<input type="hidden" id="password" name="password"/>
 </form>
   <div class="container">
     <div class="row">
@@ -37,7 +37,7 @@ function signUp(){
           </div>
           <div class="card-body">
             <h5 class="card-title text-center">회원가입</h5>
-            <form class="form-signin" method="post">
+            <div class="form-signin" >
               <div class="form-label-group">
                 <input type="text" id="inputUserId" class="form-control" placeholder="Username" required autofocus>
                 <label for="inputUserId">UserID</label>
@@ -65,7 +65,7 @@ function signUp(){
               <hr class="my-4">
               <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign up with Google</button>
               <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

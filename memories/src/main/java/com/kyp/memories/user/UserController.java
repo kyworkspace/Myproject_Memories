@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.kyp.memories.VO.UserVO;
 import com.kyp.memories.service.UserService;
 
 @Controller
@@ -44,6 +45,12 @@ public class UserController {
 		String password = req.getParameter("password");
 		String form = req.getParameter("signUpForm");
 		
+		
+		UserVO userVO = new UserVO();
+		userVO.setID(Id);
+		userVO.setEMAIL(email);
+		userVO.setPW(password);
+		userVO.setNM(Id);
 		
 		System.out.println(form);
 		System.out.println("Id : "+Id);
