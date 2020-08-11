@@ -1,7 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script>
+	function tryLogin(){
+		const loginForm = $("#nav_loginForm");
+		loginForm.attr("action","/login/login.go")
+		loginForm.submit();
+	}
+</script>
+
 <!-- Navigation -->
+<form id="nav_loginForm" method="POST">
+	
+</form>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="/">Our Memories</a>
@@ -13,9 +24,9 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-          <a  href="#" class="btn btn-primary">로그인</a>
-          <span class="nav-link" style = "color:white;">님 환영 합니다.</span>
-          <a  href="#" class="btn btn-danger">로그아웃</a>
+          <a  href="javascript:tryLogin()" class="btn btn-primary">로그인</a>
+          <!-- <span class="nav-link" style = "color:white;">님 환영 합니다.</span> -->
+          <!-- <a  href="#" class="btn btn-danger">로그아웃</a> -->
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">마이페이지</a>
