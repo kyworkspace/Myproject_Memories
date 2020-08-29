@@ -13,6 +13,7 @@ function signUp(){
 	form.submit();
 }
 function login(){
+	
 	const form = $("#loginForm");
 	$("#userId").val($("#inputUserId").val());
 	$("#password").val($("#inputPassword").val());

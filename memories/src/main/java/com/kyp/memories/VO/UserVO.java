@@ -36,5 +36,11 @@ public class UserVO {
 	public void setEMAIL(String eMAIL) {
 		EMAIL = eMAIL;
 	}
+	@Override
+	public String toString() {
+		return "UserVO [user_no=" + user_no + ", ID=" + ID + ", PW=" + PW + ", NM=" + NM + ", EMAIL=" + EMAIL + "]";
+	}
+	
+	
 
 }
