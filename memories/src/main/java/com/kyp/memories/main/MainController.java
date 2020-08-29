@@ -15,25 +15,25 @@ import com.kyp.memories.service.UserService;
  * 로그인 관리
  * 
 */
-@Controller
-@RequestMapping("/")
+//@Controller
+//@RequestMapping("/")
 public class MainController {
 	
-	@Autowired
-	UserService userService;
-	
-	@RequestMapping("/")
-	public String main() {
-		
-		/*
-		 * UserVO userVO = new UserVO();
-		 * 
-		 * List<UserVO> results = userService.getUsers();
-		 * 
-		 * for(UserVO vo : results) { System.out.println("결과물 : "+vo.getNM()); }
-		 */
-		
-		return "main";
-	}
+//	@Autowired
+//	UserService userService;
+//	
+//	@RequestMapping("/")
+//	public String main() {
+//		
+//		/*
+//		 * UserVO userVO = new UserVO();
+//		 * 
+//		 * List<UserVO> results = userService.getUsers();
+//		 * 
+//		 * for(UserVO vo : results) { System.out.println("결과물 : "+vo.getNM()); }
+//		 */
+//		
+//		return "main";
+//	}
 
 }
